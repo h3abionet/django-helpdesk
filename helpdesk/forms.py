@@ -22,6 +22,10 @@ from helpdesk.models import (Ticket, Queue, FollowUp, Attachment, IgnoreEmail, T
                              CustomField, TicketCustomFieldValue, TicketDependency)
 from helpdesk import settings as helpdesk_settings
 
+from captcha.fields import ReCaptchaField
+# from snowpenguin.django.recaptcha2.fields import ReCaptchaField
+# from snowpenguin.django.recaptcha2.widgets import ReCaptchaWidget
+
 User = get_user_model()
 
 CUSTOMFIELD_TO_FIELD_DICT = {
@@ -41,7 +45,6 @@ class CustomFieldMixin(object):
     """
     Mixin that provides a method to turn CustomFields into an actual field
     """
-
     def customfield_to_field(self, field, instanceargs):
         # if-elif branches start with special cases
         if field.data_type == 'varchar':
@@ -79,7 +82,6 @@ class EditTicketForm(CustomFieldMixin, forms.ModelForm):
     class Meta:
         model = Ticket
         exclude = ('created', 'modified', 'status', 'on_hold', 'resolution', 'last_escalation', 'assigned_to')
-
     def __init__(self, *args, **kwargs):
         """
         Add any custom fields that are defined to the form
@@ -118,7 +120,6 @@ class EditTicketForm(CustomFieldMixin, forms.ModelForm):
 
 
 class EditFollowUpForm(forms.ModelForm):
-
     class Meta:
         model = FollowUp
         exclude = ('date', 'user',)
@@ -193,7 +194,6 @@ class AbstractTicketForm(CustomFieldMixin, forms.Form):
 
     def _create_ticket(self):
         queue = Queue.objects.get(id=int(self.cleaned_data['queue']))
-
         ticket = Ticket(title=self.cleaned_data['title'],
                         submitter_email=self.cleaned_data['submitter_email'],
                         created=timezone.now(),
@@ -301,7 +301,6 @@ class TicketForm(AbstractTicketForm):
         help_text=_('This e-mail address will receive copies of all public '
                     'updates to this ticket.'),
     )
-
     assigned_to = forms.ChoiceField(
         widget=forms.Select(attrs={'class': 'form-control'}),
         choices=(),
@@ -362,7 +361,8 @@ class PublicTicketForm(AbstractTicketForm):
         label=_('Your E-Mail Address'),
         help_text=_('We will e-mail you when your ticket is updated.'),
     )
-
+    # captcha = ReCaptchaField(widget=ReCaptchaWidget()) # NOTE Captcha on submit ticket
+    captcha = ReCaptchaField() # NOTE Captcha on submit ticket
     def __init__(self, *args, **kwargs):
         """
         Add any (non-staff) custom fields that are defined to the form
