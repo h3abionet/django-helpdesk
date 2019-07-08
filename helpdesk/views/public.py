@@ -22,6 +22,7 @@ from django.conf import settings
 from helpdesk import settings as helpdesk_settings
 from helpdesk.decorators import protect_view
 from helpdesk.forms import PublicTicketForm
+from django.contrib.auth.forms import AuthenticationForm
 from helpdesk.lib import text_is_spam
 from helpdesk.models import Ticket, Queue, UserSettings, KBCategory
 
@@ -58,6 +59,29 @@ def homepage(request):
                 except ValueError:
                     # if someone enters a non-int string for the ticket
                     return HttpResponseRedirect(reverse('helpdesk:home'))
+        # form = AuthenticationForm(request.POST, request.FILES)
+        # if form.is_valid():
+        #     ''' Begin reCAPTCHA validation '''
+        #     # recaptcha_response = request.POST.get('g-recaptcha-response')
+        #     # url = 'https://www.google.com/recaptcha/api/siteverify'
+        #     # values = {
+        #     #     'secret': "6LeBWpkUAAAAAMKlYr6-k3JAQZFNP3LvBbTDPnRs",
+        #     #     'response': recaptcha_response
+        #     # }
+        #     # data = urllib.urlencode(values)
+        #     # req = urllib2.Request(url, data)
+        #     # response = urllib2.urlopen(req)
+        #     # result = json.load(response)
+        #     # ''' End reCAPTCHA validation '''
+        #     #
+        #     # if result['success']:
+        #     #     form.save()
+        #     #     messages.success(request, 'New comment added with success!')
+        #     # else:
+        #     #     messages.error(request, 'Invalid reCAPTCHA. Please try again.')
+        #     #
+        #     # return redirect('login')
+
     else:
         try:
             queue = Queue.objects.get(slug=request.GET.get('queue', None))

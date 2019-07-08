@@ -5,9 +5,7 @@
 {% if request.user.is_authenticated %}
     <meta http-equiv="REFRESH" content="0;url={% url 'helpdesk:home' %}">
 {% else %}
-{#    {% load recaptcha2 %}#}
     <head>
-{#        {% recaptcha_explicit_support %}#}
     </head>
     <div class="col-md-4 col-md-offset-4">
         <div class="login-panel panel panel-default">
@@ -26,17 +24,8 @@
                         <div class="form-group">
                             <input class="form-control" placeholder="Password" name="password" type="password" value="">
                         </div>
-{#                        <div id='recaptcha'></div>#}
-{#                        <script>#}
-{#                            django_recaptcha_callbacks.push(function() {#}
-{#                                grecaptcha.render('recaptcha', {#}
-{#                                    'theme': 'dark',#}
-{#                                    'sitekey': '{% recaptcha_key %}'#}
-{#                                })#}
-{#                            });#}
-{#                        </script>#}
-                        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-                        <div class="g-recaptcha" data-sitekey="6Lfr-IkUAAAAAF9IKn7EZNNX4DHPwcL3os6KqKGe"></div>
+{#                        <script src="https://www.google.com/recaptcha/api.js" async defer></script>#}
+{#                        <div class="g-recaptcha" data-sitekey="6LeBWpkUAAAAAPMAvNiZA3y8G_qnZefw1wuMxavY"></div>#}
                         <div class="checkbox">
                             <label>
                                 <input name="remember" type="checkbox" value="Remember Me">{% trans 'Remember Me' %}
@@ -47,7 +36,6 @@
                         <input type="hidden" name="next" value="{% if next %}{{ next }}{% else %}../{% endif %}" />
                     </fieldset>
                 {% csrf_token %}</form>
-{#                {% recaptcha_explicit_init %}#}
             </div>
         </div>
     </div>

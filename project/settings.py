@@ -21,7 +21,7 @@ SITE_ID = 1
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'mxqtif7#j8!=+%tous8i3pfi&_(bqqwm6j@e575)&+-owi*+3y'
+SECRET_KEY = '6LeBWpkUAAAAAMKlYr6-k3JAQZFNP3LvBbTDPnRs'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -128,6 +128,6 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = "/var/www/static/"
 
-RECAPTCHA_PRIVATE_KEY = '6Lfr-IkUAAAAAMUl3dCshKOv9Namllu6Q5J75KX8'
-RECAPTCHA_PUBLIC_KEY = '6Lfr-IkUAAAAAF9IKn7EZNNX4DHPwcL3os6KqKGe'
+RECAPTCHA_PRIVATE_KEY = '6LeBWpkUAAAAAMKlYr6-k3JAQZFNP3LvBbTDPnRs'
+RECAPTCHA_PUBLIC_KEY = '6LeBWpkUAAAAAPMAvNiZA3y8G_qnZefw1wuMxavY'
 NOCAPTCHA = True

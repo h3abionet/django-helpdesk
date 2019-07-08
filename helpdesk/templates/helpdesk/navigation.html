@@ -2,6 +2,45 @@
 
 <!-- Navigation -->
         <nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="margin-bottom: 0">
+            <div id="top-bar">
+                <section id="sp-top-bar" class="top_bar_left">
+                    <div class="container">
+                        <div class="row">
+                            <div id="sp-top1" class="col-sm-2 col-md-2">
+                                <div class="sp-column ">
+                                    <ul class="social-icons">
+                                        <li><a target="_blank" href="https://www.facebook.com/H3ABioNet"><i
+                                                class="fa fa-facebook"></i></a></li>
+                                        <li><a target="_blank" href="https://twitter.com/H3ABioNet"><i
+                                                class="fa fa-twitter"></i></a></li>
+                                        <li><a target="_blank"
+                                               href="https://www.youtube.com/channel/UCMYQE_GYsOKY6-j8z9N6Adw"><i
+                                                class="fa fa-youtube"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div id="sp-top3" class="col-sm-2 col-md-2">
+                                <div class="sp-column ">
+                                    <div class="sp-module ">
+                                        <div class="sp-module-content">
+                                            <div class="custom" style="display: inline-flex;">
+
+                                                <div><a href="https://helpdesk.h3abionet.org" target="_blank"
+                                                        rel="noopener noreferrer">
+                                                    <button class="top_helpdesk">Helpdesk</button>
+                                                </a></div>
+                                                <div><a href="/communications/contact">
+                                                    <button class="top_contact">Contact Us</button>
+                                                </a></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#helpdesk-nav-collapse">
                     <span class="sr-only">{% trans 'Toggle navigation' %}</span>
@@ -9,8 +48,191 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="{% url 'helpdesk:home' %}">{% trans 'Helpdesk' %}</a>
+{#                <a class="navbar-brand" href="{% url 'helpdesk:home' %}">H3ABioNet {% trans 'Helpdesk' %}</a>#}
             </div>
+
+
+            <div class="row" style="position: relative;">
+                <div id="sp-logo" class="col-xs-9 col-sm-10 col-md-3">
+                    <div class="sp-column "><a class="h3a logo" href="/">
+                        <img class=" sp-default-logo hidden-xs" src="https://www.h3abionet.org/images/logos/LOGO-HEADER.png" alt="H3ABioNet">
+{#                        <img class=" sp-retina-logo hidden-xs" src="https://www.h3abionet.org/images/logos/LOGO-HEADER.png" alt="H3ABioNet" width="625" height="158">#}
+{#                        <img class="sp-default-logo visible-xs-block" src="https://www.h3abionet.org/images/logos/Asset-1H3Abionet_logo_stack.png" alt="H3ABioNet"></a>#}
+                        <div>
+                            <img class="h3a-slogan" src="https://www.h3abionet.org/images/logos/h3a-slogan.png" alt="H3ABioNet">
+                        </div>
+                    </div>
+                </div>
+{#                <div id="sp-menu" class="col-xs-1 col-sm-1 col-md-8" style="position: static;">#}
+{#                    <div class="sp-column ">#}
+{#                        <div class="sp-megamenu-wrapper">#}
+{#                            <a id="offcanvas-toggler" class="visible-sm visible-xs" href="#"><i class="fa fa-bars"></i></a>#}
+{#                            <ul class="sp-megamenu-parent menu-fade hidden-sm hidden-xs">#}
+{#                                <li class="sp-menu-item sp-has-child current-item active menu-justify">#}
+{#                                    <div class="sp-dropdown sp-dropdown-main sp-dropdown-mega sp-menu-full container"#}
+{#                                         style="">#}
+{#                                        <div class="sp-dropdown-inner">#}
+{#                                            <div class="row">#}
+{#                                                <div class="col-sm-12"></div>#}
+{#                                            </div>#}
+{#                                        </div>#}
+{#                                    </div>#}
+{#                                </li>#}
+{#                                <li class="sp-menu-item sp-has-child about"><a href="/about"><i#}
+{#                                        class="fa fa-address-book"></i> About</a>#}
+{#                                    <div class="sp-dropdown sp-dropdown-main sp-menu-center"#}
+{#                                         style="width: 1170px;left: -585px;">#}
+{#                                        <div class="sp-dropdown-inner" style="background: #27405e;">#}
+{#                                            <ul class="sp-dropdown-items">#}
+{#                                                <li class="sp-menu-item"><a href="/about/organization">Organization</a>#}
+{#                                                </li>#}
+{#                                                <li class="sp-menu-item"><a href="/about/h3abionet-node-pis">Node#}
+{#                                                    PIs</a></li>#}
+{#                                                <li class="sp-menu-item"><a href="/about/consortium">Consortium</a></li>#}
+{#                                                <li class="sp-menu-item"><a href="/about/sab">SAB</a></li>#}
+{#                                            </ul>#}
+{#                                        </div>#}
+{#                                    </div>#}
+{#                                </li>#}
+{#                                <li class="sp-menu-item sp-has-child training"><a href="/training"><i#}
+{#                                        class="fa fa-graduation-cap"></i> Training</a>#}
+{#                                    <div class="sp-dropdown sp-dropdown-main sp-menu-right" style="width: 1170px;">#}
+{#                                        <div class="sp-dropdown-inner" style="background: #2196f3;">#}
+{#                                            <ul class="sp-dropdown-items">#}
+{#                                                <li class="sp-menu-item"><a href="/training/courses-and-events">H3ABioNet#}
+{#                                                    Courses &amp; Events</a></li>#}
+{#                                                <li class="sp-menu-item"><a href="/training/internships">Internships</a>#}
+{#                                                </li>#}
+{#                                                <li class="sp-menu-item"><a href="/training/bioinformaticseducation">Bioinformatics#}
+{#                                                    Education</a></li>#}
+{#                                                <li class="sp-menu-item"><a href="/training/online-training">Online#}
+{#                                                    Training</a></li>#}
+{#                                                <li class="sp-menu-item"></li>#}
+{#                                            </ul>#}
+{#                                        </div>#}
+{#                                    </div>#}
+{#                                </li>#}
+{#                                <li class="sp-menu-item sp-has-child tools"><a href="/tools-and-services"><i#}
+{#                                        class="fa fa-wrench"></i> Tools &amp; Services</a>#}
+{#                                    <div class="sp-dropdown sp-dropdown-main sp-menu-right" style="width: 1170px;">#}
+{#                                        <div class="sp-dropdown-inner" style="background: #f44336;">#}
+{#                                            <ul class="sp-dropdown-items">#}
+{#                                                <li class="sp-menu-item"><a#}
+{#                                                        href="/tools-and-services/bioinformatics-tools">Bioinformatics#}
+{#                                                    Tools</a></li>#}
+{#                                                <li class="sp-menu-item"><a href="/tools-and-services/workflows">Bioinformatics#}
+{#                                                    Workflows</a></li>#}
+{#                                                <li class="sp-menu-item"><a#}
+{#                                                        href="/tools-and-services/technical-guidelines">Technical#}
+{#                                                    Guidelines</a></li>#}
+{#                                                <li class="sp-menu-item"><a#}
+{#                                                        href="/tools-and-services/computing-infrastructure">Computing#}
+{#                                                    Infrastructure</a></li>#}
+{#                                                <li class="sp-menu-item"><a#}
+{#                                                        href="/tools-and-services/node-accreaditation">Node#}
+{#                                                    Accreditation</a></li>#}
+{#                                            </ul>#}
+{#                                        </div>#}
+{#                                    </div>#}
+{#                                </li>#}
+{#                                <li class="sp-menu-item sp-has-child resources"><a href="/resources"><i#}
+{#                                        class="fa fa-server"></i> Resources</a>#}
+{#                                    <div class="sp-dropdown sp-dropdown-main sp-menu-right" style="width: 1170px;">#}
+{#                                        <div class="sp-dropdown-inner" style="background: #ffc107;">#}
+{#                                            <ul class="sp-dropdown-items">#}
+{#                                                <li class="sp-menu-item"><a href="/resources/h3africa-catalogue">H3Africa#}
+{#                                                    Catalogue</a></li>#}
+{#                                                <li class="sp-menu-item"><a href="/resources/h3africa-archive">H3Africa#}
+{#                                                    Archive</a></li>#}
+{#                                                <li class="sp-menu-item"><a href="/resources/h3africa-chip">H3Africa#}
+{#                                                    Chip</a></li>#}
+{#                                            </ul>#}
+{#                                        </div>#}
+{#                                    </div>#}
+{#                                </li>#}
+{#                                <li class="sp-menu-item sp-has-child datastds"><a href="/data-standards"><i#}
+{#                                        class="fa fa-book"></i> Data &amp; Standards</a>#}
+{#                                    <div class="sp-dropdown sp-dropdown-main sp-menu-right" style="width: 1170px;">#}
+{#                                        <div class="sp-dropdown-inner" style="background: #a864a8;">#}
+{#                                            <ul class="sp-dropdown-items">#}
+{#                                                <li class="sp-menu-item"><a href="/data-standards/datastds">Data#}
+{#                                                    Standardisation</a></li>#}
+{#                                                <li class="sp-menu-item"><a href="/data-standards/datamanagement">Data#}
+{#                                                    Management</a></li>#}
+{#                                                <li class="sp-menu-item"><a href="/data-standards/redcap">REDCap</a>#}
+{#                                                </li>#}
+{#                                            </ul>#}
+{#                                        </div>#}
+{#                                    </div>#}
+{#                                </li>#}
+{#                                <li class="sp-menu-item sp-has-child comm"><a href="/communications"><i#}
+{#                                        class="fa fa-rss-square"></i> Communications</a>#}
+{#                                    <div class="sp-dropdown sp-dropdown-main sp-menu-right" style="width: 1170px;">#}
+{#                                        <div class="sp-dropdown-inner" style="background: #8bc34a;">#}
+{#                                            <ul class="sp-dropdown-items">#}
+{#                                                <li class="sp-menu-item"><a href="/communications/publication">Publications</a>#}
+{#                                                </li>#}
+{#                                                <li class="sp-menu-item"><a href="/communications/current-newsletter">Current#}
+{#                                                    Newsletter</a></li>#}
+{#                                                <li class="sp-menu-item"><a href="/communications/past-newsletters">Past#}
+{#                                                    newsletters</a></li>#}
+{#                                                <li class="sp-menu-item"><a href="/communications/monthly-events">Monthly#}
+{#                                                    events</a></li>#}
+{#                                                <li class="sp-menu-item"><a href="/communications/contact">Contact#}
+{#                                                    Us</a></li>#}
+{#                                            </ul>#}
+{#                                        </div>#}
+{#                                    </div>#}
+{#                                </li>#}
+{#                            </ul>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
+                <div id="sp-topsearch" class="col-xs-1 col-sm-1 col-md-1">
+                    <div class="sp-column ">
+                        <div class="sp-module ">
+                            <div class="sp-module-content">
+                                <div style="display:inline-block;" class="top-search-wrapper">
+
+                                    <div class="icon-top-wrapper">
+                                        <!--
+                                        <i class="fa fa-search search-open-icon" aria-hidden="true"></i>
+                                        <i class="fa fa-times search-close-icon" aria-hidden="true"></i>
+                                        -->
+                                        <i class="pe pe-7s-search search-open-icon" aria-hidden="true"></i>
+                                        <i class="pe pe-7s-close search-close-icon" aria-hidden="true"></i>
+                                    </div>
+
+                                    <div class="row top-search-input-wrap" id="top-search-input-wrap">
+                                        <div class="top-search-wrap">
+                                            <div class="searchwrapper">
+                                                <form action="/" method="post">
+                                                    <div class="search">
+                                                        <div class="top-search-wrapper">
+                                                            <div class="sp_search_input"><input name="searchword"
+                                                                                                maxlength="200"
+                                                                                                class="mod-search-searchword inputbox"
+                                                                                                type="text" size="100"
+                                                                                                value="Search Here..."
+                                                                                                onblur="if (this.value=='') this.value='Search Here...';"
+                                                                                                onfocus="if (this.value=='Search Here...') this.value='';">
+                                                            </div>
+                                                        </div>
+                                                        <input type="hidden" name="task" value="search">
+                                                        <input type="hidden" name="option" value="com_search">
+                                                        <input type="hidden" name="Itemid" value="467">
+                                                    </div>
+                                                </form>
+                                            </div> <!-- /.searchwrapper -->
+                                        </div> <!-- /.col-sm-6 -->
+                                    </div> <!-- /.row -->
+                                </div> <!-- /.top-search-wrapper -->    </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
             <!-- /.navbar-header -->
 
             <div class="collapse navbar-collapse" id="helpdesk-nav-collapse">
@@ -92,10 +314,10 @@
                 <ul id="dropdown" class="nav navbar-nav">
                     {% if helpdesk_settings.HELPDESK_ALLOW_NON_STAFF_TICKET_UPDATE %}
                         <li><a href='{% url 'helpdesk:dashboard' %}'>{% trans "Dashboard" %}</a></li>
-                        <li><a href='{% url 'helpdesk:submit' %}'>{% trans "Submit a Ticket" %}</a></li>
+                        <li><a href='{% url 'helpdesk:submit' %}'>{% trans "Submit a Ticket" %} </a></li>
                     {% else %}
                         {% if helpdesk_settings.HELPDESK_SUBMIT_A_TICKET_PUBLIC %}
-                            <li><a href='{% url 'helpdesk:submit' %}'>{% trans "Submit a Ticket" %}</a></li>
+                            <li><a href='{% url 'helpdesk:submit' %}'>{% trans "Submit a Ticket" %} </a></li>
                         {% endif %}
                     {% endif %}
                     {% if helpdesk_settings.HELPDESK_KB_ENABLED %}<li><a href='{% url 'helpdesk:kb_index' %}'>{% trans "Knowledgebase" %}</a></li>{% endif %}

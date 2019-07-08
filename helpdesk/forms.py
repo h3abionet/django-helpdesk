@@ -23,8 +23,6 @@ from helpdesk.models import (Ticket, Queue, FollowUp, Attachment, IgnoreEmail, T
 from helpdesk import settings as helpdesk_settings
 
 from captcha.fields import ReCaptchaField
-# from snowpenguin.django.recaptcha2.fields import ReCaptchaField
-# from snowpenguin.django.recaptcha2.widgets import ReCaptchaWidget
 
 User = get_user_model()
 
@@ -361,7 +359,6 @@ class PublicTicketForm(AbstractTicketForm):
         label=_('Your E-Mail Address'),
         help_text=_('We will e-mail you when your ticket is updated.'),
     )
-    # captcha = ReCaptchaField(widget=ReCaptchaWidget()) # NOTE Captcha on submit ticket
     captcha = ReCaptchaField() # NOTE Captcha on submit ticket
     def __init__(self, *args, **kwargs):
         """
