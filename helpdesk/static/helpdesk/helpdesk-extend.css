@@ -107,3 +107,38 @@ ul.social-icons {
     width: 149px;
     margin: 0px 0px 0px -99px;
 }
+
+.sp-retina-logo, .sp-default-logo {
+    padding: 0px !important;
+    max-width: 90% !important;
+    margin-left: 10px;
+}
+
+@media (min-width: 992px) {
+    .col-md-3 {
+        width: 25%;
+        margin: -20px 0px -28px 0px;
+    }
+    .h3a-slogan {
+        margin: -85px 0px 0px 338px;
+        max-width: 133%;
+    }
+    .navbar-fixed-bottom .navbar-collapse, .navbar-fixed-top .navbar-collapse, .navbar-static-top .navbar-collapse {
+        padding-right: 65px;
+        padding-left: 0;
+        float: right;
+    }
+}
+
+#helpdesk-body {
+    padding-top: 150px;
+}
+
+.navbar-nav>li>a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    line-height: 20px;
+    color: #337ab7 !important;
+}
+
+
