@@ -23,3 +23,15 @@ demo/demodesk/media/helpdesk/attachments/DH-3/4/*
 !demo/demodesk/media/helpdesk/attachments/DH-3/3/someinfo.txt
 !demo/demodesk/media/helpdesk/attachments/DH-3/4/helpdesk.png
 
+ftpconfigs/
+.ftpconfig
+.ftpconfig
+.ftpignore
+.idea/
+.tx/
+venv/
+db.sqlite3
+/project/settings.py
+.vscode/sftp.json
+.vscode/settings.json
+.gitignore

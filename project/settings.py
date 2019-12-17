@@ -26,7 +26,7 @@ SECRET_KEY = '6LeBWpkUAAAAAMKlYr6-k3JAQZFNP3LvBbTDPnRs'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['137.158.204.109']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'markdown_deux',
     'bootstrapform',
     'helpdesk',
+    'django_extensions',
     # 'snowpenguin.django.recaptcha2',
     'captcha',
 ]
@@ -131,3 +132,11 @@ STATIC_ROOT = "/var/www/static/"
 RECAPTCHA_PRIVATE_KEY = '6LeBWpkUAAAAAMKlYr6-k3JAQZFNP3LvBbTDPnRs'
 RECAPTCHA_PUBLIC_KEY = '6LeBWpkUAAAAAPMAvNiZA3y8G_qnZefw1wuMxavY'
 NOCAPTCHA = True
+
+# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+# EMAIL_HOST = 'smtp.h3abionet.org'
+# EMAIL_PORT = 25
+# EMAIL_HOST_USER = 'helpdesk@h3abionet.org'
+# #EMAIL_HOST_PASSWORD = ''
+# EMAIL_USE_TLS = False
+# DEFAULT_FROM_EMAIL = 'H3ABioNet Helpdesk <helpdesk@h3abionet.org>'
