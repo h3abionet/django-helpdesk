@@ -23,7 +23,6 @@ demo/demodesk/media/helpdesk/attachments/DH-3/4/*
 !demo/demodesk/media/helpdesk/attachments/DH-3/3/someinfo.txt
 !demo/demodesk/media/helpdesk/attachments/DH-3/4/helpdesk.png
 
-**/settings.py
 *.swp
 .env/
 .env_old/
@@ -32,3 +31,14 @@ shell.history
 *.sqlite*
 */secrets.py
 
+ftpconfigs/
+.ftpconfig
+.ftpconfig
+.ftpignore
+.idea/
+.tx/
+venv/
+db.sqlite3
+.vscode/sftp.json
+.vscode/settings.json
+.gitignore
