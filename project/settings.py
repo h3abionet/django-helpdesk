@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 """
 
 import os
-import secrets
+import project.ssecrets as ssecrets
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -22,10 +22,10 @@ SITE_ID = 1
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = secrets.SECRET_KEY
+SECRET_KEY = ssecrets.SECRET_KEY
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -130,14 +130,14 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = "/var/www/static/"
 
-RECAPTCHA_PRIVATE_KEY = secrets.RECAPTCHA_PRIVATE_KEY
-RECAPTCHA_PUBLIC_KEY = secrets.RECAPTCHA_PUBLIC_KEY
+RECAPTCHA_PRIVATE_KEY = ssecrets.RECAPTCHA_PRIVATE_KEY
+RECAPTCHA_PUBLIC_KEY = ssecrets.RECAPTCHA_PUBLIC_KEY
 NOCAPTCHA = True
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.h3abionet.org'
 EMAIL_PORT = 25
 EMAIL_HOST_USER = 'helpdesk@h3abionet.org'
-EMAIL_HOST_PASSWORD = secrets.EMAIL_HOST_PASSWORD
+EMAIL_HOST_PASSWORD = ssecrets.EMAIL_HOST_PASSWORD
 EMAIL_USE_TLS = False
 DEFAULT_FROM_EMAIL = 'H3ABioNet Helpdesk <helpdesk@h3abionet.org>'

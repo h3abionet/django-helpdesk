@@ -29,7 +29,7 @@ demo/demodesk/media/helpdesk/attachments/DH-3/4/*
 backup_db.sh
 shell.history
 *.sqlite*
-*/secrets.py
+*/ssecrets.py
 
 ftpconfigs/
 .ftpconfig
