@@ -7,3 +7,6 @@ lxml
 simplejson
 pytz
 six
+django-recaptcha
+django-extensions
+requests

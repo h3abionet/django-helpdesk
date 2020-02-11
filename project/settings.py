@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 """
 
 import os
+import secrets
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -21,12 +22,12 @@ SITE_ID = 1
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '6LeBWpkUAAAAAMKlYr6-k3JAQZFNP3LvBbTDPnRs'
+SECRET_KEY = secrets.SECRET_KEY
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['137.158.204.109']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -43,6 +44,7 @@ INSTALLED_APPS = [
     'markdown_deux',
     'bootstrapform',
     'helpdesk',
+    'django_extensions',
     # 'snowpenguin.django.recaptcha2',
     'captcha',
 ]
@@ -128,6 +130,14 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = "/var/www/static/"
 
-RECAPTCHA_PRIVATE_KEY = '6LeBWpkUAAAAAMKlYr6-k3JAQZFNP3LvBbTDPnRs'
-RECAPTCHA_PUBLIC_KEY = '6LeBWpkUAAAAAPMAvNiZA3y8G_qnZefw1wuMxavY'
+RECAPTCHA_PRIVATE_KEY = secrets.RECAPTCHA_PRIVATE_KEY
+RECAPTCHA_PUBLIC_KEY = secrets.RECAPTCHA_PUBLIC_KEY
 NOCAPTCHA = True
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.h3abionet.org'
+EMAIL_PORT = 25
+EMAIL_HOST_USER = 'helpdesk@h3abionet.org'
+EMAIL_HOST_PASSWORD = secrets.EMAIL_HOST_PASSWORD
+EMAIL_USE_TLS = False
+DEFAULT_FROM_EMAIL = 'H3ABioNet Helpdesk <helpdesk@h3abionet.org>'
